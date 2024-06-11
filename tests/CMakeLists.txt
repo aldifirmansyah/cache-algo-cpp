@@ -1,0 +1,5 @@
+find_package(Catch2 REQUIRED)
+message(CMAKE_CURRENT_SOURCE_DIR=${CMAKE_CURRENT_SOURCE_DIR})
+file(GLOB_RECURSE test_srcs ${CMAKE_CURRENT_SOURCE_DIR}/*.cc)
+add_executable(tests ${test_srcs})
+target_link_libraries(tests Catch2::Catch2WithMain)
