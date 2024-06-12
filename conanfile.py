@@ -12,10 +12,6 @@ class CacheConan(ConanFile):
     generators = "CMakeToolchain", "CMakeDeps"
     exports_sources = "*"
 
-    def requirements(self):
-        self.requires("catch2/3.6.0")
-        self.requires("yaml-cpp/0.8.0")
-
     def build(self):
         cmake = CMake(self)
         cmake.configure()
